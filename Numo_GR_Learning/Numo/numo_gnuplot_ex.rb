@@ -4,8 +4,9 @@ require 'numo/gnuplot'
 
 Numo.gnuplot do
   set title: 'TITLE'
+  set terminal: 'png'
+  set output: "'exercise.png'"
   plot 'sin(x)', { w: :lines },
        'cos(x)', { w: :lines },
-       'x/10',   { w: :lines }
-  sleep 3
+       'tan(x)/10',   { w: :lines }
 end
